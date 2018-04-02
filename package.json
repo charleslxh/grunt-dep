@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/charleslxh/grunt-dep/issues"
   },
-  "homepage": "https://github.com/charleslxh/grunt-dep#readme"
+  "homepage": "https://github.com/charleslxh/grunt-dep#readme",
+  "dependencies": {
+    "node-dep": "^1.0.0"
+  }
 }
