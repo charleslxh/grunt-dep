@@ -1,6 +1,6 @@
 'use strict'
 
-var Dep = require('node-dep');
+var Dep = require('node-deployer');
 
 module.exports = function (grunt) {
   grunt.registerMultiTask('dep', 'deployer your applications', function() {
