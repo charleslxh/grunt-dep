@@ -1,6 +1,6 @@
 {
   "name": "grunt-dep",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A grunt task plugin to deploy application",
   "main": "tasks/dep.js",
   "scripts": {
