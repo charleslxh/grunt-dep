@@ -14,6 +14,8 @@ see [node-dep configurations](https://github.com/charleslxh/node-dep).
 
 # Example
 
+task configuration:
+
 ```js
 {
     "options": {
