@@ -14,7 +14,7 @@ see [node-dep configurations](https://github.com/charleslxh/node-dep).
 
 # Example
 
-```json
+```js
 {
     "options": {
         "tasks": [
@@ -22,7 +22,7 @@ see [node-dep configurations](https://github.com/charleslxh/node-dep).
                 "name": "list all files in /var/www",
                 "command": "ls -la",
                 "priority: 0,
-                "stages": ["prod", "staging"],
+                "stages": ["prod", "test"],
                 "workDir": "/var/www"
             }
         ,
@@ -30,7 +30,7 @@ see [node-dep configurations](https://github.com/charleslxh/node-dep).
                 "name": "show the absolute path of application release path",
                 "command": "pwd",
                 "priority: 0,
-                "stages": ["prod", "staging"]
+                "stages": ["prod", "test"]
             }
         ],
         "proxy": {
@@ -40,13 +40,13 @@ see [node-dep configurations](https://github.com/charleslxh/node-dep).
             "privateKey": fs.readFileSync(path.resolve(os.homedir(), ".ssh/id_rsa"))
         }
     },
-    "staging": {
+    "test": {
         "options": {
             "servers": [
                 {
                     "useProxy: false",
-                    "stage": "staging",
-                    "releasePath": "/var/www/app"
+                    "stage": "test",
+                    "releasePath": "/var/www/app",
                     "connectOptions": {
                         "name": "s1",
                         "host": "192.168.51.223",
@@ -65,7 +65,7 @@ see [node-dep configurations](https://github.com/charleslxh/node-dep).
                     "name": "s1",
                     "useProxy: true",
                     "stage": "prod",
-                    "releasePath": "/var/www/app"
+                    "releasePath": "/var/www/app",
                     "connectOptions": {
                         "host": "192.168.51.223",
                         "port": 22,
@@ -78,7 +78,7 @@ see [node-dep configurations](https://github.com/charleslxh/node-dep).
                     "name": "s1",
                     "useProxy: true",
                     "stage": "prod",
-                    "releasePath": "/var/www/app"
+                    "releasePath": "/var/www/app",
                     "connectOptions": {
                         "host": "192.168.51.223",
                         "port": 22,
